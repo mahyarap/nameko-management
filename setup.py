@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='nameko-management',
@@ -7,7 +7,7 @@ setup(
     description='Management framework for nameko services',
     author='timbu',
     url='http://github.com/timbu/nameko-management',
-    py_modules=['nameko_management'],
+    packages=find_packages(exclude=['test', 'test.*']),
     install_requires=[
         "nameko>=2.3.1",
     ],
